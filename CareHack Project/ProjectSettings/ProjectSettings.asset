@@ -523,7 +523,8 @@ PlayerSettings:
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 0
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    Standalone: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: CareHack Project
@@ -607,9 +608,9 @@ PlayerSettings:
   cloudServicesEnabled:
     Build: 0
     Collab: 1
-    UNet: 1
     ErrorHub: 0
     Hub: 0
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 3fb3931d-9ede-47b6-88ec-974752c78776
