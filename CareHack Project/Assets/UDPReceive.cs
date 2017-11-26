@@ -103,16 +103,18 @@ public class UDPReceive : MonoBehaviour
 
 				// Den abgerufenen Text anzeigen.
 				print(">> " + text);
-				if (text.Contains("arachnophobia")) {
-					if (Application.loadedLevelName == "SCENE1")
-					{
-						
-					}
-					else {
-						Application.LoadLevel("SCENE1");
-						text = "";
-					}
-				
+				if (text.Contains("arachnophobia"))
+				{
+
+
+					Application.LoadLevel("SCENE1");
+					text = "";
+
+
+				}
+				else if(text.Contains("acrophobia")) {
+					Application.LoadLevel("scene2");
+					text = "";
 				}
 				if (text.Contains("stop"))
 				{
@@ -120,9 +122,14 @@ public class UDPReceive : MonoBehaviour
 
 
 				}
-				if (text.Contains("nxt"))
+				if (text.Contains("nxt1"))
 				{
+					
+
 					Application.LoadLevel("SCENE3");
+					
+					
+
 
 				}
 

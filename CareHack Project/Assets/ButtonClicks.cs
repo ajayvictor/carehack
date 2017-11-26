@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonClicks : MonoBehaviour {
-	
+	public string phobia;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,8 +13,9 @@ public class ButtonClicks : MonoBehaviour {
 	void Update () {
 		
 	}
-	public  void startfn() { 
-		gameObject.GetComponent<UDPSend>().sendString("arachnophobia");
+	public  void startfn() {
+		Debug.Log(phobia);
+		gameObject.GetComponent<UDPSend>().sendString(phobia);
 	}
 	public void stopfn()
 	{
@@ -28,6 +29,14 @@ public class ButtonClicks : MonoBehaviour {
 	}
 	public void Nextlvl() {
 	
-	gameObject.GetComponent<UDPSend>().sendString("nxt");
+	gameObject.GetComponent<UDPSend>().sendString("nxt1");
 	}
+	public void aer() { 
+	phobia = "acrophobia";
+	}
+	public void arc()
+	{
+		phobia = "arachnophobia";
+	}
+
 }
