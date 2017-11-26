@@ -10,6 +10,7 @@ using System.Threading;
 public class UDPReceive : MonoBehaviour
 {
 	public GameObject SPhere;
+	static int vv;
 	// receiving Thread
 	Thread receiveThread;
 
@@ -108,13 +109,13 @@ public class UDPReceive : MonoBehaviour
 
 
 					Application.LoadLevel("SCENE1");
-					text = "";
+
 
 
 				}
 				else if(text.Contains("acrophobia")) {
 					Application.LoadLevel("scene2");
-					text = "";
+
 				}
 				if (text.Contains("stop"))
 				{
@@ -124,10 +125,15 @@ public class UDPReceive : MonoBehaviour
 				}
 				if (text.Contains("nxt1"))
 				{
-					
 
-					Application.LoadLevel("SCENE3");
-					
+					if (text.Contains("acrophobia"))
+					{
+						//Application.LoadLevel("");
+					}
+					else if (text.Contains("arachnophobia")){
+						Application.LoadLevel("SCENE3");
+
+					}
 					
 
 
